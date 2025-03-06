@@ -1,4 +1,10 @@
-import React, { createContext, useState, useContext, ReactNode } from "react";
+import React, {
+  createContext,
+  useState,
+  useEffect,
+  useContext,
+  ReactNode,
+} from "react";
 
 interface ColorContextType {
   color: string;
@@ -22,8 +28,23 @@ interface ColorProviderProps {
 }
 
 export const ColorProvider: React.FC<ColorProviderProps> = ({ children }) => {
-  const [color, setColor] = useState<string>("yellow");
-  const [mode, setMode] = useState<string>("dark");
+  // Inicializa o estado com o valor salvo ou usa o valor padrão
+  const [color, setColor] = useState<string>(() => {
+    return sessionStorage.getItem("color") || "yellow";
+  });
+  const [mode, setMode] = useState<string>(() => {
+    return sessionStorage.getItem("mode") || "dark";
+  });
+
+  // Sempre que a cor mudar, atualiza o sessionStorage
+  useEffect(() => {
+    sessionStorage.setItem("color", color);
+  }, [color]);
+
+  // Sempre que o modo mudar, atualiza o sessionStorage
+  useEffect(() => {
+    sessionStorage.setItem("mode", mode);
+  }, [mode]);
 
   const toggleMode = () => {
     setMode((prevMode) => (prevMode === "light" ? "dark" : "light"));

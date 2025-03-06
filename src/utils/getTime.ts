@@ -4,11 +4,11 @@ const greetings = () => {
   });
   const horaBrasilia = new Date(dataBrasilia).getHours();
   if (horaBrasilia >= 5 && horaBrasilia < 12) {
-    return "Bom dia";
+    return "BOM DIA!";
   } else if (horaBrasilia >= 12 && horaBrasilia < 18) {
-    return "Boa tarde";
+    return "BOA TARDE!";
   } else {
-    return "Boa noite";
+    return "BOA NOITE!";
   }
 };
 

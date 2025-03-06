@@ -14,15 +14,15 @@ const App: React.FC = () => {
     >
       <FloatBar />
       <main>
-        <h3 className="text-2xl text-dark-or-light-secondary">{greet}!</h3>
-        <h1 className="text-5xl text-dark-or-light-secondary">
-          Eu sou{" "}
-          <span className="text-primary font-bold">
+        <h3 className="text-2xl text-dark-or-light-secondary">{greet}</h3>
+        <h1 className="text-5xl text-dark-or-light-secondary font-bold">
+          EU SOU{" "}
+          <span className="text-primary">
             <Typewriter
               words={[
-                "Gabriel Branco.",
-                "Desenvolvedor Frontend.",
-                "Solucionador de problemas.",
+                "GABRIEL BRANCO.",
+                "DESENVOLVEDOR FRONTEND.",
+                "SOLUCIONADOR DE PROBLEMAS.",
               ]}
               loop={false}
               cursor={true}
