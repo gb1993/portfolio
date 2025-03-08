@@ -8,7 +8,7 @@ import DarModeIcon from "./DarkModeIcon";
 import {
   floatBarItemCss,
   floatBarItemTitleCss,
-  iconContent,
+  iconContentCss,
   themes,
 } from "@/utils/consts";
 import Link from "next/link";
@@ -22,7 +22,7 @@ const FloatBar = () => {
         <li>
           <Link href="/" className={`group ${floatBarItemCss}`}>
             <h2 className={floatBarItemTitleCss}>HOME</h2>
-            <div className={iconContent}>
+            <div className={iconContentCss}>
               <HomeIcon sx={{ fontSize: "26px" }} />
             </div>
           </Link>
@@ -30,7 +30,7 @@ const FloatBar = () => {
         <li>
           <Link href="/sobre" className={`group ${floatBarItemCss}`}>
             <h2 className={floatBarItemTitleCss}>SOBRE</h2>
-            <div className={iconContent}>
+            <div className={iconContentCss}>
               <PersonIcon sx={{ fontSize: "28px" }} />
             </div>
           </Link>
@@ -38,7 +38,7 @@ const FloatBar = () => {
         <li>
           <Link href="/trabalhos" className={`group ${floatBarItemCss}`}>
             <h2 className={floatBarItemTitleCss}>TRABALHOS</h2>
-            <div className={iconContent}>
+            <div className={iconContentCss}>
               <BusinessCenterIcon sx={{ fontSize: "26px" }} />
             </div>
           </Link>
@@ -46,7 +46,7 @@ const FloatBar = () => {
         <li>
           <Link href="/contato" className={`group ${floatBarItemCss}`}>
             <h2 className={floatBarItemTitleCss}>CONTATO</h2>
-            <div className={iconContent}>
+            <div className={iconContentCss}>
               <EmailIcon sx={{ fontSize: "26px" }} />
             </div>
           </Link>
