@@ -1,6 +1,12 @@
 import { Poppins } from "next/font/google";
-import { ColorProvider, } from "../context/ColorContext";
+import { ColorProvider } from "../context/ColorContext";
+import ThemeBody from "@/components/ThemeBody";
 import "./globals.css";
+
+export const metadata = {
+  title: "Portfólio",
+  description: "Um lugar para contar sobre minha trajetória profissional.",
+};
 
 const poppins = Poppins({
   weight: ["300", "400", "700"],
@@ -13,14 +19,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="pt-br">
-      <ColorProvider>
-        <body
-          className={`${poppins.className} w-full min-h-screen bg-dark-or-light-primary theme-${color} mode-${mode}`}
-        >
-          {children}
-        </body>
-      </ColorProvider>
-    </html>
+    <ColorProvider>
+      <html lang="pt-br">
+        <ThemeBody font={poppins.className}>{children}</ThemeBody>
+      </html>
+    </ColorProvider>
   );
 }

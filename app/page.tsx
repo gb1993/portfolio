@@ -1,15 +1,14 @@
 "use client";
+
 import { Typewriter } from "react-simple-typewriter";
 import FloatBar from "../components/FloatBar";
-// import { useColor } from "../context/ColorContext";
 import getGreetings from "../utils/getGreeting";
 
 export default function Home() {
   const greet = getGreetings();
-  // const { color, mode } = useColor();
 
   return (
-    <div className={`flex justify-center items-center`}>
+    <div className={`w-full h-dvh flex justify-center items-center`}>
       <FloatBar />
       <main className="px-4">
         <h3 className="text-lg text-dark-or-light-secondary">{greet}</h3>

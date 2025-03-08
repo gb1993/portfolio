@@ -1,3 +1,5 @@
+"use client";
+
 import { useColor } from "../../context/ColorContext";
 import HomeIcon from "@mui/icons-material/Home";
 import PersonIcon from "@mui/icons-material/Person";
@@ -9,7 +11,7 @@ import { floatBarItemCss, floatBarItemTitleCss, themes } from "@/utils/consts";
 
 const FloatBar = () => {
   const { setColor, mode, toggleMode } = useColor();
-
+  console.log(mode);
   return (
     <header className="fixed top-1/2 right-4 -translate-y-1/2 z-10">
       <ul className="flex flex-col gap-4 items-center">

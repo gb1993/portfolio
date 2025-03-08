@@ -32,7 +32,7 @@ interface ColorProviderProps {
 }
 
 export const ColorProvider: React.FC<ColorProviderProps> = ({ children }) => {
-  const hasColor = sessionStorage?.getItem("color") || "dark";
+  const hasColor = sessionStorage?.getItem("color") || "yellow";
   const hasMode = sessionStorage?.getItem("mode") || "dark";
   const [color, setColor] = useState<string>(hasColor);
   const [mode, setMode] = useState<string>(hasMode);
