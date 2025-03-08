@@ -1,4 +1,4 @@
-const greetings = () => {
+const getGreetings = () => {
   const dataBrasilia = new Date().toLocaleString("pt-BR", {
     timeZone: "America/Sao_Paulo",
   });
@@ -12,4 +12,4 @@ const greetings = () => {
   }
 };
 
-export default greetings;
+export default getGreetings;

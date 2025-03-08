@@ -5,7 +5,7 @@ import BusinessCenterIcon from "@mui/icons-material/BusinessCenter";
 import EmailIcon from "@mui/icons-material/Email";
 import SettingsIcon from "@mui/icons-material/Settings";
 import DarModeIcon from "./DarkModeIcon";
-import { floatBarItemCss, floatBarItemTitleCss, themes } from "../../consts";
+import { floatBarItemCss, floatBarItemTitleCss, themes } from "@/utils/consts";
 
 const FloatBar = () => {
   const { setColor, mode, toggleMode } = useColor();
@@ -26,7 +26,7 @@ const FloatBar = () => {
           </a>
         </li>
         <li>
-          <a href="/" className={`group ${floatBarItemCss}`}>
+          <a href="/sobre" className={`group ${floatBarItemCss}`}>
             <h2 className={floatBarItemTitleCss}>SOBRE</h2>
             <div
               className={
@@ -38,7 +38,7 @@ const FloatBar = () => {
           </a>
         </li>
         <li>
-          <a href="/" className={`group ${floatBarItemCss}`}>
+          <a href="/trabalhos" className={`group ${floatBarItemCss}`}>
             <h2 className={floatBarItemTitleCss}>TRABALHOS</h2>
             <div
               className={
@@ -50,7 +50,7 @@ const FloatBar = () => {
           </a>
         </li>
         <li>
-          <a href="/" className={`group ${floatBarItemCss}`}>
+          <a href="/contato" className={`group ${floatBarItemCss}`}>
             <h2 className={floatBarItemTitleCss}>CONTATO</h2>
             <div
               className={
