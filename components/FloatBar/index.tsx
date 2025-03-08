@@ -1,5 +1,3 @@
-"use client";
-
 import { useColor } from "../../context/ColorContext";
 import HomeIcon from "@mui/icons-material/Home";
 import PersonIcon from "@mui/icons-material/Person";
@@ -7,61 +5,51 @@ import BusinessCenterIcon from "@mui/icons-material/BusinessCenter";
 import EmailIcon from "@mui/icons-material/Email";
 import SettingsIcon from "@mui/icons-material/Settings";
 import DarModeIcon from "./DarkModeIcon";
-import { floatBarItemCss, floatBarItemTitleCss, themes } from "@/utils/consts";
+import {
+  floatBarItemCss,
+  floatBarItemTitleCss,
+  iconContent,
+  themes,
+} from "@/utils/consts";
+import Link from "next/link";
 
 const FloatBar = () => {
   const { setColor, mode, toggleMode } = useColor();
-  console.log(mode);
+
   return (
     <header className="fixed top-1/2 right-4 -translate-y-1/2 z-10">
       <ul className="flex flex-col gap-4 items-center">
         <li>
-          <a href="/" className={`group ${floatBarItemCss}`}>
+          <Link href="/" className={`group ${floatBarItemCss}`}>
             <h2 className={floatBarItemTitleCss}>HOME</h2>
-            <div
-              className={
-                "flex items-center justify-center w-full h-full z-[2] bg-black-secondary rounded-full group-hover:bg-primary duration-400"
-              }
-            >
+            <div className={iconContent}>
               <HomeIcon sx={{ fontSize: "26px" }} />
             </div>
-          </a>
+          </Link>
         </li>
         <li>
-          <a href="/sobre" className={`group ${floatBarItemCss}`}>
+          <Link href="/sobre" className={`group ${floatBarItemCss}`}>
             <h2 className={floatBarItemTitleCss}>SOBRE</h2>
-            <div
-              className={
-                "flex items-center justify-center w-full h-full z-[2] bg-black-secondary rounded-full group-hover:bg-primary duration-400"
-              }
-            >
+            <div className={iconContent}>
               <PersonIcon sx={{ fontSize: "28px" }} />
             </div>
-          </a>
+          </Link>
         </li>
         <li>
-          <a href="/trabalhos" className={`group ${floatBarItemCss}`}>
+          <Link href="/trabalhos" className={`group ${floatBarItemCss}`}>
             <h2 className={floatBarItemTitleCss}>TRABALHOS</h2>
-            <div
-              className={
-                "flex items-center justify-center w-full h-full z-[2] bg-black-secondary rounded-full group-hover:bg-primary duration-400"
-              }
-            >
+            <div className={iconContent}>
               <BusinessCenterIcon sx={{ fontSize: "26px" }} />
             </div>
-          </a>
+          </Link>
         </li>
         <li>
-          <a href="/contato" className={`group ${floatBarItemCss}`}>
+          <Link href="/contato" className={`group ${floatBarItemCss}`}>
             <h2 className={floatBarItemTitleCss}>CONTATO</h2>
-            <div
-              className={
-                "flex items-center justify-center w-full h-full z-[2] bg-black-secondary rounded-full group-hover:bg-primary duration-400"
-              }
-            >
+            <div className={iconContent}>
               <EmailIcon sx={{ fontSize: "26px" }} />
             </div>
-          </a>
+          </Link>
         </li>
         <li className={`group ${floatBarItemCss}`}>
           <ul className={floatBarItemTitleCss}>

@@ -7,7 +7,7 @@
   --color-dark-or-light-secondary: #ffffff;
 }
 * {
-  @apply transition-colors;
+  @apply transition-colors duration-500;
 }
 .theme-yellow {
   --color-primary: #febb32;
@@ -24,7 +24,7 @@
 .theme-pink {
   --color-primary: #ee6192;
 }
-.theme-purple-light {
+.theme-purple {
   --color-primary: #6957af;
 }
 .theme-red {

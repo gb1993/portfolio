@@ -1,6 +1,7 @@
 "use client";
 
 import { useColor } from "../../context/ColorContext";
+import FloatBar from "../FloatBar";
 
 interface ThemeBodyProps {
   children: React.ReactNode;
@@ -14,6 +15,7 @@ export default function ThemeBody({ children, font }: ThemeBodyProps) {
     <body
       className={`${font} w-full min-h-dvh bg-dark-or-light-primary theme-${color} mode-${mode}`}
     >
+      <FloatBar />
       {children}
     </body>
   );

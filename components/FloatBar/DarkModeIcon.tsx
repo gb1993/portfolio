@@ -14,7 +14,7 @@ const DarModeIcon: React.FC<DarModeIconProps> = ({ darkMode }) => {
           zIndex: 2,
           position: "absolute",
           opacity: darkMode ? 1 : 0,
-          transition: "transform 0.3s ease-in-out",
+          transition: "transform 0.4s ease-in-out",
           transform: darkMode ? "scale(1)" : "scale(0)",
         }}
       />
@@ -24,7 +24,7 @@ const DarModeIcon: React.FC<DarModeIconProps> = ({ darkMode }) => {
           zIndex: 2,
           position: "absolute",
           opacity: darkMode ? 0 : 1,
-          transition: "transform 0.3s ease-in-out",
+          transition: "transform 0.4s ease-in-out",
           transform: darkMode ? "scale(0)" : "scale(1)",
         }}
       />

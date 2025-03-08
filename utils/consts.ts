@@ -7,6 +7,8 @@ export const floatBarItemTitleCss = `
   bg-primary pointer-events-none pr-0 w-fit overflow-hidden rounded-full w-13 flex items-center justify-center gap-2 font-bold opacity-0 h-full absolute right-0 !transition-all !duration-300
   group-hover:opacity-100 group-hover:pl-8 group-hover:pr-14 group-hover:pointer-events-auto
 `;
+export const iconContent =
+  "flex items-center justify-center w-full h-full z-[2] bg-black-secondary rounded-full group-hover:bg-primary duration-400";
 
 /* ARRAY CONST */
 export const themes = [
