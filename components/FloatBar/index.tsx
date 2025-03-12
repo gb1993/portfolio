@@ -13,8 +13,13 @@ import {
 } from "@/utils/consts";
 import Link from "next/link";
 
-const FloatBar = () => {
+interface Props {
+  currentPath: string;
+}
+
+const FloatBar = ({ currentPath }: Props) => {
   const { setColor, mode, toggleMode } = useColor();
+  const isActive = (href: string) => currentPath === href;
 
   return (
     <header className="fixed top-1/2 right-4 -translate-y-1/2 z-10">
@@ -22,7 +27,11 @@ const FloatBar = () => {
         <li>
           <Link href="/" className={`group ${floatBarItemCss}`}>
             <h2 className={floatBarItemTitleCss}>HOME</h2>
-            <div className={iconContentCss}>
+            <div
+              className={`${iconContentCss} ${
+                isActive("/") ? "bg-primary" : "bg-black-secondary"
+              }`}
+            >
               <HomeIcon sx={{ fontSize: "26px" }} />
             </div>
           </Link>
@@ -30,7 +39,11 @@ const FloatBar = () => {
         <li>
           <Link href="/sobre" className={`group ${floatBarItemCss}`}>
             <h2 className={floatBarItemTitleCss}>SOBRE</h2>
-            <div className={iconContentCss}>
+            <div
+              className={`${iconContentCss} ${
+                isActive("/sobre") ? "bg-primary" : "bg-black-secondary"
+              }`}
+            >
               <PersonIcon sx={{ fontSize: "28px" }} />
             </div>
           </Link>
@@ -38,7 +51,11 @@ const FloatBar = () => {
         <li>
           <Link href="/trabalhos" className={`group ${floatBarItemCss}`}>
             <h2 className={floatBarItemTitleCss}>TRABALHOS</h2>
-            <div className={iconContentCss}>
+            <div
+              className={`${iconContentCss} ${
+                isActive("/trabalhos") ? "bg-primary" : "bg-black-secondary"
+              }`}
+            >
               <BusinessCenterIcon sx={{ fontSize: "26px" }} />
             </div>
           </Link>
@@ -46,7 +63,11 @@ const FloatBar = () => {
         <li>
           <Link href="/contato" className={`group ${floatBarItemCss}`}>
             <h2 className={floatBarItemTitleCss}>CONTATO</h2>
-            <div className={iconContentCss}>
+            <div
+              className={`${iconContentCss} ${
+                isActive("/contato") ? "bg-primary" : "bg-black-secondary"
+              }`}
+            >
               <EmailIcon sx={{ fontSize: "26px" }} />
             </div>
           </Link>

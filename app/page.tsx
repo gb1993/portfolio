@@ -25,7 +25,7 @@ export default function Home() {
       </h1>
       <p className="text-dark-or-light-secondary">
         Apaixonado por tecnologia desde que me entendo por gente, estudei as
-        mais diversas áreas do ramo. Nos últimos três anos, especializei-me em
+        mais diversas áreas do ramo. Nos últimos três anos, me especializei em
         desenvolvimento web e atuei como frontend, voltado para o aprimoramento
         e a concepção de e-commerces.
       </p>
