@@ -2,6 +2,7 @@
 
 import { Typewriter } from "react-simple-typewriter";
 import getGreetings from "../utils/getGreeting";
+import ButtonLink from "@/components/ButtonLink";
 
 export default function Home() {
   const greet = getGreetings();
@@ -23,18 +24,13 @@ export default function Home() {
           />
         </span>
       </h1>
-      <p className="text-dark-or-light-secondary">
+      <p className="text-dark-or-light-secondary mb-8">
         Apaixonado por tecnologia desde que me entendo por gente, estudei as
         mais diversas áreas do ramo. Nos últimos três anos, me especializei em
         desenvolvimento web e atuei como frontend, voltado para o aprimoramento
-        e a concepção de e-commerces.
+        e a concepção de projetos inovadores.
       </p>
-      <a
-        href="/sobre"
-        className="hover:bg-primary font-bold w-fit flex mt-8 items-center justify-center text-dark-or-light-secondary border-2 border-primary px-12 py-2 rounded-full"
-      >
-        SAIBA MAIS
-      </a>
+      <ButtonLink text="SAIBA MAIS" target="_self" link="/sobre" />
     </main>
   );
 }

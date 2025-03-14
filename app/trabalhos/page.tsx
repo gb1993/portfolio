@@ -1,10 +1,13 @@
+import Container from "@/components/Container";
 import Title from "@/components/Title";
 
 const Trabalhos = () => {
   return (
-    <div>
-      <Title backTitle="TRABALHO" title="MEU" highlight="PORTFÓLIO" />
-    </div>
+    <Container>
+      <>
+        <Title backTitle="TRABALHO" title="MEU" highlight="PORTFÓLIO" />
+      </>
+    </Container>
   );
 };
 

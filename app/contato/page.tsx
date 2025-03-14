@@ -1,33 +1,62 @@
+"use client";
+
+import { FormEvent, useState } from "react";
 import Title from "@/components/Title";
-import { resend } from "@/utils/sendEmail";
+import sendResendEmail from "@/utils/sendEmail";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import MailOutlineIcon from "@mui/icons-material/MailOutline";
-import {
-  contactInputCss,
-  contactTextAreaCss,
-  socialMediaIconCss,
-} from "@/utils/consts";
-import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import GitHubIcon from "@mui/icons-material/GitHub";
-import Link from "next/link";
-import Main from "@/components/Main";
+import RefreshIcon from "@mui/icons-material/Refresh";
+import { contactInputCss, contactTextAreaCss } from "@/utils/consts";
+import Container from "@/components/Container";
+import TitleSecondary from "@/components/TitleSecondary/intex";
+
+export interface FormData {
+  name: string;
+  email: string;
+  title: string;
+  message: string;
+}
 
 const Contato = () => {
-  const handleSubmit = () => {
-    console.log("clicou");
+  const [returnMessage, setReturnMessage] = useState<string | undefined>(
+    undefined
+  );
+  const [loading, setloading] = useState<boolean>(false);
+  const messageOK = "Obrigado pelo contato! te retorno em breve.";
+  const messageNotOK = "Erro ao enviar, por favor tente mais tarde.";
+
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setloading(true);
+
+    try {
+      const form = e.currentTarget;
+      const formData: FormData = {
+        name: (form.elements.namedItem("name") as HTMLInputElement).value,
+        email: (form.elements.namedItem("email") as HTMLInputElement).value,
+        title: (form.elements.namedItem("title") as HTMLInputElement).value,
+        message: (form.elements.namedItem("message") as HTMLTextAreaElement)
+          .value,
+      };
+      await sendResendEmail(formData);
+      return setReturnMessage(messageOK);
+    } catch (error) {
+      console.error("Erro ao enviar o formulário:", error);
+      return setReturnMessage(messageNotOK);
+    } finally {
+      setloading(false);
+    }
   };
 
   return (
-    <Main>
+    <Container>
       <>
         <Title backTitle="CONTATO" title="FALE" highlight="COMIGO" />
         <div className="w-full flex justify-between gap-7 flex-col lg:flex-row">
           <div className="w-full lg:max-w-1/3">
-            <h3 className="text-dark-or-light-secondary mb-4 text-2xl font-semibold">
-              NÃO TENHA VERGONHA!
-            </h3>
+            <TitleSecondary text="NÃO TENHA VERGONHA!" />
             <p className="text-dark-or-light-secondary mb-4 text-sm leading-normal">
-              Fique avontade para me contactar. Estou sempre aberto a novos
+              Fique à vontade para me contactar. Estou sempre aberto a novos
               projetos, ideias criativas ou oportunidades de participar de
               projetos inovadores.
             </p>
@@ -60,29 +89,14 @@ const Contato = () => {
                   </p>
                 </div>
               </div>
-              <div className="flex items-center gap-2">
-                <Link
-                  href={"https://www.linkedin.com/in/gabriel-branco/"}
-                  target="_blank"
-                  className={socialMediaIconCss}
-                >
-                  <LinkedInIcon className="text-white" sx={{ width: 18 }} />
-                </Link>
-                <Link
-                  href={"https://github.com/gb1993"}
-                  target="_blank"
-                  className={socialMediaIconCss}
-                >
-                  <GitHubIcon className="text-white" sx={{ width: 18 }} />
-                </Link>
-              </div>
             </div>
           </div>
           <form
             method="post"
             className="w-full lg:max-w-2/3 flex gap-6 flex-col"
+            onSubmit={handleSubmit}
           >
-            <div className="flex items-center gap-6 justify-between">
+            <div className="flex flex-col lg:flex-row items-center gap-6 justify-between">
               <label htmlFor="name" className="w-full">
                 <input
                   type="text"
@@ -124,13 +138,20 @@ const Contato = () => {
                 className={contactTextAreaCss}
               />
             </label>
-            <button className="cursor-pointer hover:bg-primary font-bold w-fit flex items-center justify-center text-dark-or-light-secondary border-2 border-primary px-12 py-2 rounded-full">
-              ENVIAR
+            <button className="cursor-pointer hover:bg-primary font-bold w-full lg:w-fit flex items-center justify-center text-dark-or-light-secondary border-2 border-primary px-12 py-2 rounded-full">
+              {loading ? (
+                <RefreshIcon className="animate-spin text-dark-or-light-secondary" />
+              ) : (
+                "ENVIAR"
+              )}
             </button>
+            {returnMessage && (
+              <p className="text-dark-or-light-secondary">{returnMessage}</p>
+            )}
           </form>
         </div>
       </>
-    </Main>
+    </Container>
   );
 };
 
