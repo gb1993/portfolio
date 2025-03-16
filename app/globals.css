@@ -5,15 +5,17 @@
   --color-black-secondary: #2b2a2a;
   --color-dark-or-light-primary: #111111;
   --color-dark-or-light-secondary: #ffffff;
-  --animate-opacity-page: opacity-page 2s ease-in-out;
+  --animate-opacity-page: opacity-page 2.2s ease-in-out;
   @keyframes opacity-page {
     0% {
+      transform: translateY(100px); /* Desloca o conteúdo para baixo */
       opacity: 0;
     }
     50% {
       opacity: 0;
     }
     100% {
+      transform: translateY(0); /* Retorna à posição original */
       opacity: 1;
     }
   }
@@ -52,7 +54,6 @@
 }
 @keyframes page-transition {
   0% {
-    right: 0;
     width: 0;
   }
   50% {
