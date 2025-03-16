@@ -5,6 +5,18 @@
   --color-black-secondary: #2b2a2a;
   --color-dark-or-light-primary: #111111;
   --color-dark-or-light-secondary: #ffffff;
+  --animate-opacity-page: opacity-page 2s ease-in-out;
+  @keyframes opacity-page {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
 }
 * {
   @apply transition-colors duration-500;
@@ -37,4 +49,75 @@
 .mode-dark {
   --color-dark-or-light-primary: #111111;
   --color-dark-or-light-secondary: #ffffff;
+}
+@keyframes page-transition {
+  0% {
+    right: 0;
+    width: 0;
+  }
+  50% {
+    right: 0;
+    width: 100%;
+  }
+  100% {
+    right: -100%;
+    width: 100%;
+  }
+}
+
+/* Barra com animação */
+.page-transition-bar {
+  position: relative;
+  width: 0;
+  height: 15%; /* Tamanho da barra */
+  animation: page-transition 1s ease-in-out forwards;
+}
+
+/* Definindo os atrasos */
+.page-transition-bar:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.page-transition-bar:nth-child(2) {
+  animation-delay: 0.16s;
+}
+
+.page-transition-bar:nth-child(3) {
+  animation-delay: 0.33s;
+}
+
+.page-transition-bar:nth-child(4) {
+  animation-delay: 0.5s;
+}
+
+.page-transition-bar:nth-child(5) {
+  animation-delay: 0.66s;
+}
+
+.page-transition-bar:nth-child(6) {
+  animation-delay: 0.83s;
+}
+
+.page-transition-bar:nth-child(7) {
+  animation-delay: 1s;
+}
+
+.page-transition-bar:nth-child(8) {
+  animation-delay: 1.16s;
+}
+
+.page-transition-bar:nth-child(9) {
+  animation-delay: 1.33s;
+}
+
+.page-transition-bar:nth-child(10) {
+  animation-delay: 1.5s;
+}
+
+.page-transition-bar:nth-child(11) {
+  animation-delay: 1.66s;
+}
+
+.page-transition-bar:nth-child(12) {
+  animation-delay: 1.83s;
 }
