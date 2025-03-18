@@ -76,12 +76,13 @@ export const academic = [
     timeOn: "2022 - 2023",
     title: "CURSO DESENVOLVIMENTO WEB",
     place: "TRYBE",
-    description: "Curso completo de desenvolvimento web full stack.",
+    description:
+      "Curso completo de desenvolvimento web com conteúdo de frontend, backend, python, node, docker, mongodb e sql",
   },
   {
     timeOn: "2014 - 2018",
     title: "Análise de sistemas",
-    place: "unicarioca",
+    place: "Unicarioca",
     description:
       "Onde consegui a base para trilhar a carreira na área de tecnologia.",
   },

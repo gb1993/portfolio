@@ -1,10 +1,12 @@
+import FloatBar from "@/components/FloatBar";
 import PageTransition from "@/components/PageTransition";
 
 export default function Template({ children }: { children: React.ReactNode }) {
   return (
-    <div className="relative overflow-hidden">
+    <div className="min-w-dvh relative overflow-hidden">
       <PageTransition />
-      <div className="min-h-dvh animate-opacity-page">{children}</div>
+      <FloatBar />
+      {children}
     </div>
   );
 }

@@ -1,3 +1,6 @@
+"use client";
+
+import { usePathname } from "next/navigation";
 import { useColor } from "../../context/ColorContext";
 import HomeIcon from "@mui/icons-material/Home";
 import PersonIcon from "@mui/icons-material/Person";
@@ -13,16 +16,13 @@ import {
 } from "@/utils/consts";
 import Link from "next/link";
 
-interface Props {
-  currentPath: string;
-}
-
-const FloatBar = ({ currentPath }: Props) => {
+const FloatBar = () => {
   const { setColor, mode, toggleMode } = useColor();
-  const isActive = (href: string) => currentPath === href;
+  const pathname = usePathname();
+  const isActive = (href: string) => pathname === href;
 
   return (
-    <header className="fixed top-1/2 right-4 -translate-y-1/2 z-10">
+    <header className="fixed top-1/2 right-4 -translate-y-1/2 z-10 animate-opacity-page">
       <ul className="flex flex-col gap-4 items-center">
         <li>
           <Link href="/" className={`group ${floatBarItemCss}`}>

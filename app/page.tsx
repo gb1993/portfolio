@@ -8,7 +8,7 @@ export default function Home() {
   const greet = getGreetings();
 
   return (
-    <main className="w-full h-dvh flex flex-col justify-center max-w-[800px] m-auto px-4">
+    <main className="w-full h-dvh flex flex-col justify-center max-w-[800px] m-auto px-4 animate-opacity-page">
       <h3 className="text-lg text-dark-or-light-secondary" title="Baseado no horário de brasília">{greet}</h3>
       <h1 className="text-4xl text-dark-or-light-secondary font-bold mt-4 mb-2">
         EU SOU{" "}

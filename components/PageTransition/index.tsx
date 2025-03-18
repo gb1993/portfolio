@@ -8,11 +8,6 @@ const PageTransition = () => {
       <div className="page-transition-bar bg-primary" />
       <div className="page-transition-bar bg-primary" />
       <div className="page-transition-bar bg-primary" />
-      <div className="page-transition-bar bg-primary" />
-      <div className="page-transition-bar bg-primary" />
-      <div className="page-transition-bar bg-primary" />
-      <div className="page-transition-bar bg-primary" />
-      <div className="page-transition-bar bg-primary" />
     </div>
   );
 };

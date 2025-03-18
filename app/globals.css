@@ -5,17 +5,17 @@
   --color-black-secondary: #2b2a2a;
   --color-dark-or-light-primary: #111111;
   --color-dark-or-light-secondary: #ffffff;
-  --animate-opacity-page: opacity-page 2.2s ease-in-out;
+  --animate-opacity-page: opacity-page 3s ease-in-out;
   @keyframes opacity-page {
     0% {
-      transform: translateY(100px); /* Desloca o conteúdo para baixo */
+      transform: translateY(100px);
       opacity: 0;
     }
     50% {
       opacity: 0;
     }
     100% {
-      transform: translateY(0); /* Retorna à posição original */
+      transform: translateY(0);
       opacity: 1;
     }
   }
@@ -71,54 +71,34 @@
   position: relative;
   width: 0;
   height: 15%; /* Tamanho da barra */
-  animation: page-transition 1s ease-in-out forwards;
+  animation: page-transition 1.08s ease-in-out;
 }
 
 /* Definindo os atrasos */
 .page-transition-bar:nth-child(1) {
-  animation-delay: 0s;
+  animation-delay: 0.14s;
 }
 
 .page-transition-bar:nth-child(2) {
-  animation-delay: 0.16s;
+  animation-delay: 0.28s;
 }
 
 .page-transition-bar:nth-child(3) {
-  animation-delay: 0.33s;
+  animation-delay: 0.42s;
 }
 
 .page-transition-bar:nth-child(4) {
-  animation-delay: 0.5s;
+  animation-delay: 0.56s;
 }
 
 .page-transition-bar:nth-child(5) {
-  animation-delay: 0.66s;
+  animation-delay: 0.7s;
 }
 
 .page-transition-bar:nth-child(6) {
-  animation-delay: 0.83s;
+  animation-delay: 0.84s;
 }
 
 .page-transition-bar:nth-child(7) {
-  animation-delay: 1s;
-}
-
-.page-transition-bar:nth-child(8) {
-  animation-delay: 1.16s;
-}
-
-.page-transition-bar:nth-child(9) {
-  animation-delay: 1.33s;
-}
-
-.page-transition-bar:nth-child(10) {
-  animation-delay: 1.5s;
-}
-
-.page-transition-bar:nth-child(11) {
-  animation-delay: 1.66s;
-}
-
-.page-transition-bar:nth-child(12) {
-  animation-delay: 1.83s;
+  animation-delay: 1.08s;
 }
