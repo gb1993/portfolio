@@ -32,17 +32,17 @@ interface ColorProviderProps {
 }
 
 export const ColorProvider: React.FC<ColorProviderProps> = ({ children }) => {
-  const hasColor = sessionStorage?.getItem("color") || "yellow";
-  const hasMode = sessionStorage?.getItem("mode") || "dark";
+  const hasColor = localStorage?.getItem("color") || "yellow";
+  const hasMode = localStorage?.getItem("mode") || "dark";
   const [color, setColor] = useState<string>(hasColor);
   const [mode, setMode] = useState<string>(hasMode);
 
   useEffect(() => {
-    sessionStorage?.setItem("color", color);
+    localStorage?.setItem("color", color);
   }, [color]);
 
   useEffect(() => {
-    sessionStorage?.setItem("mode", mode);
+    localStorage?.setItem("mode", mode);
   }, [mode]);
 
   const toggleMode = () => {

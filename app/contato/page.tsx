@@ -61,20 +61,22 @@ const Contato = () => {
               projetos inovadores.
             </p>
             <div>
-              <div className="flex items-center gap-4 mb-4">
-                <WhatsAppIcon
-                  className="text-primary"
-                  sx={{ width: "40px", height: "40px" }}
-                />
-                <div>
-                  <h4 className="text-dark-or-light-secondary/60 mb-1">
-                    ME CHAMA NO WHATSAPP
-                  </h4>
-                  <p className="text-dark-or-light-secondary text-sm">
-                    (21)98212-6050
-                  </p>
+              <a href="https://wa.me/5521982126050" target="_blank">
+                <div className="flex items-center gap-4 mb-4">
+                  <WhatsAppIcon
+                    className="text-primary"
+                    sx={{ width: "40px", height: "40px" }}
+                  />
+                  <div>
+                    <h4 className="text-dark-or-light-secondary/60 mb-1">
+                      ME CHAMA NO WHATSAPP
+                    </h4>
+                    <p className="text-dark-or-light-secondary text-sm">
+                      (21)98212-6050
+                    </p>
+                  </div>
                 </div>
-              </div>
+              </a>
               <div className="flex items-center gap-4 mb-4">
                 <MailOutlineIcon
                   className="text-primary"

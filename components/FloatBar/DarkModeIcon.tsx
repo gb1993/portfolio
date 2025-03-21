@@ -7,7 +7,7 @@ interface DarModeIconProps {
 
 const DarModeIcon: React.FC<DarModeIconProps> = ({ darkMode }) => {
   return (
-    <div className="relative w-6.5 h-6.5">
+    <div className="relative w-6.5 h-6.5" title="dark/light mode">
       <LightModeIcon
         sx={{
           fontSize: "26px",
