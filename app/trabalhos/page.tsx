@@ -202,7 +202,7 @@ const Trabalhos = () => {
         </Link>
 
         <Link
-          href="https://candide.com.br/"
+          href="https://www.candide.com.br/"
           target="_blank"
           title="Candide"
           className="row-start-3 group"
@@ -273,7 +273,7 @@ const Trabalhos = () => {
         </Link>
 
         <Link
-          href="https://formaturismo.com.br/"
+          href="https://www.formaturismo.com.br/"
           target="_blank"
           title="Forma Turismo"
           className="row-start-3 group"
@@ -517,7 +517,7 @@ const Trabalhos = () => {
         </Link>
 
         <Link
-          href="https://digaspi.com.br/"
+          href="https://www.digaspi.com.br/"
           target="_blank"
           title="Digaspi"
           className="row-start-4"
@@ -945,7 +945,7 @@ const Trabalhos = () => {
         </Link>
 
         <Link
-          href="https://lojaclickhouse.com.br/"
+          href="https://www.lojaclickhouse.com.br/"
           target="_blank"
           title="Clickhouse"
           className="row-start-6"
