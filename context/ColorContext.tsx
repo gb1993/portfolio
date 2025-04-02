@@ -37,8 +37,8 @@ export const ColorProvider: React.FC<ColorProviderProps> = ({ children }) => {
   useEffect(() => {
     const storedColor = localStorage.getItem("color");
     const storedMode = localStorage.getItem("mode");
-    if (storedColor) setColor(storedColor);
-    if (storedMode) setMode(storedMode);
+    setColor(storedColor || "yellow");
+    setMode(storedMode || "dark");
   }, []);
 
   useEffect(() => {
