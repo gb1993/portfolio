@@ -9,6 +9,7 @@ import RefreshIcon from "@mui/icons-material/Refresh";
 import { contactInputCss, contactTextAreaCss } from "@/utils/consts";
 import Container from "@/components/Container";
 import TitleSecondary from "@/components/TitleSecondary/intex";
+import Confetti from "react-confetti";
 
 export interface FormData {
   name: string;
@@ -149,6 +150,9 @@ const Contato = () => {
             </button>
             {returnMessage && (
               <p className="text-dark-or-light-secondary">{returnMessage}</p>
+            )}
+            {returnMessage && (
+              <Confetti initialVelocityY={1} />
             )}
           </form>
         </div>
