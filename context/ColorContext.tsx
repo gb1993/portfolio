@@ -23,8 +23,7 @@ const ColorContext = createContext<ColorContextType>({
 });
 
 export const useColor = (): ColorContextType => {
-  const context = useContext(ColorContext);
-  return context;
+  return useContext(ColorContext);
 };
 
 interface ColorProviderProps {
@@ -32,17 +31,28 @@ interface ColorProviderProps {
 }
 
 export const ColorProvider: React.FC<ColorProviderProps> = ({ children }) => {
-  const hasColor = localStorage?.getItem("color") || "yellow";
-  const hasMode = localStorage?.getItem("mode") || "dark";
-  const [color, setColor] = useState<string>(hasColor);
-  const [mode, setMode] = useState<string>(hasMode);
+  const [color, setColor] = useState<string>("yellow");
+  const [mode, setMode] = useState<string>("dark");
 
   useEffect(() => {
-    localStorage?.setItem("color", color);
+    if (typeof window !== "undefined") {
+      const storedColor = localStorage.getItem("color");
+      const storedMode = localStorage.getItem("mode");
+      if (storedColor) setColor(storedColor);
+      if (storedMode) setMode(storedMode);
+    }
+  }, []);
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      localStorage.setItem("color", color);
+    }
   }, [color]);
 
   useEffect(() => {
-    localStorage?.setItem("mode", mode);
+    if (typeof window !== "undefined") {
+      localStorage.setItem("mode", mode);
+    }
   }, [mode]);
 
   const toggleMode = () => {
@@ -50,8 +60,8 @@ export const ColorProvider: React.FC<ColorProviderProps> = ({ children }) => {
   };
 
   return (
-    <ColorContext value={{ color, setColor, mode, toggleMode }}>
+    <ColorContext.Provider value={{ color, setColor, mode, toggleMode }}>
       {children}
-    </ColorContext>
+    </ColorContext.Provider>
   );
 };
