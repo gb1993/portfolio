@@ -35,24 +35,18 @@ export const ColorProvider: React.FC<ColorProviderProps> = ({ children }) => {
   const [mode, setMode] = useState<string>("dark");
 
   useEffect(() => {
-    if (typeof window !== "undefined") {
-      const storedColor = localStorage.getItem("color");
-      const storedMode = localStorage.getItem("mode");
-      if (storedColor) setColor(storedColor);
-      if (storedMode) setMode(storedMode);
-    }
+    const storedColor = localStorage.getItem("color");
+    const storedMode = localStorage.getItem("mode");
+    if (storedColor) setColor(storedColor);
+    if (storedMode) setMode(storedMode);
   }, []);
 
   useEffect(() => {
-    if (typeof window !== "undefined") {
-      localStorage.setItem("color", color);
-    }
+    localStorage.setItem("color", color);
   }, [color]);
 
   useEffect(() => {
-    if (typeof window !== "undefined") {
-      localStorage.setItem("mode", mode);
-    }
+    localStorage.setItem("mode", mode);
   }, [mode]);
 
   const toggleMode = () => {
