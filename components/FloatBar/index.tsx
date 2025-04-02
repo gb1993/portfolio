@@ -73,30 +73,7 @@ const FloatBar = () => {
           </Link>
         </li>
 
-        {/* Versão do seletor de cores para mobile */}
-        <li className={`group ${floatBarItemCss} lg:hidden`}>
-          <details className="relative">
-            <summary className="cursor-pointer flex items-center justify-center w-full h-full z-[2] bg-black-secondary rounded-full group-hover:bg-primary duration-400">
-              <SettingsIcon
-                className="animate-spin"
-                sx={{ fontSize: "26px" }}
-              />
-            </summary>
-            <ul className="absolute top-full mt-2 flex gap-2 bg-white dark:bg-gray-800 p-2 rounded shadow">
-              {themes.map((theme, index) => (
-                <li
-                  key={index}
-                  className="w-6 h-6 border cursor-pointer"
-                  style={{ background: theme.color }}
-                  onClick={() => setColor(theme.value)}
-                />
-              ))}
-            </ul>
-          </details>
-        </li>
-
-        {/* Versão do seletor de cores para desktop */}
-        <li className={`group ${floatBarItemCss} hidden lg:flex`}>
+        <li className={`group ${floatBarItemCss} flex`}>
           <ul className={floatBarItemTitleCss}>
             {themes.map((theme, index) => (
               <li
