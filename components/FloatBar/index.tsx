@@ -18,7 +18,6 @@ import Link from "next/link";
 import AnimatedHamburgerButton from "../MenuHamburguer";
 import Drawer from "../Drawer";
 import { DrawerProvider } from "@/context/DrawerContext";
-import Title from "../Title";
 
 const FloatBar = () => {
   const { setColor, mode, toggleMode } = useColor();
