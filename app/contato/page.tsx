@@ -5,11 +5,11 @@ import Title from "@/components/Title";
 import sendResendEmail from "@/utils/sendEmail";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import MailOutlineIcon from "@mui/icons-material/MailOutline";
-import RefreshIcon from "@mui/icons-material/Refresh";
 import { contactInputCss, contactTextAreaCss } from "@/utils/consts";
 import Container from "@/components/Container";
 import TitleSecondary from "@/components/TitleSecondary/intex";
 import Confetti from "react-confetti";
+import { Bounce, ToastContainer, toast } from "react-toastify";
 
 export interface FormData {
   name: string;
@@ -19,16 +19,22 @@ export interface FormData {
 }
 
 const Contato = () => {
-  const [returnMessage, setReturnMessage] = useState<string | undefined>(
-    undefined
-  );
-  const [loading, setloading] = useState<boolean>(false);
-  const messageOK = "Obrigado pelo contato! te retorno em breve.";
-  const messageNotOK = "Erro ao enviar, por favor tente mais tarde.";
+  const [showConfetti, setShowConfetti] = useState(false);
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setloading(true);
+
+    const toastId = toast.loading("Enviando...", {
+      position: "bottom-left",
+      autoClose: 4000,
+      hideProgressBar: false,
+      closeOnClick: false,
+      pauseOnHover: false,
+      draggable: false,
+      progress: undefined,
+      theme: "dark",
+      transition: Bounce,
+    });
 
     try {
       const form = e.currentTarget;
@@ -39,13 +45,23 @@ const Contato = () => {
         message: (form.elements.namedItem("message") as HTMLTextAreaElement)
           .value,
       };
+
       await sendResendEmail(formData);
-      return setReturnMessage(messageOK);
+      toast.update(toastId, {
+        render: "Obrigado pelo contato!",
+        type: "success",
+        isLoading: false,
+        autoClose: 4000,
+      });
+      setShowConfetti(true);
     } catch (error) {
-      console.error("Erro ao enviar o formulário:", error);
-      return setReturnMessage(messageNotOK);
-    } finally {
-      setloading(false);
+      toast.update(toastId, {
+        render: "Tente novamente.",
+        type: "error",
+        isLoading: false,
+        autoClose: 4000,
+      });
+      throw new Error("Error: " + error);
     }
   };
 
@@ -142,20 +158,24 @@ const Contato = () => {
               />
             </label>
             <button className="cursor-pointer hover:bg-primary font-bold w-full lg:w-fit flex items-center justify-center text-dark-or-light-secondary border-2 border-primary px-12 py-2 rounded-full">
-              {loading ? (
-                <RefreshIcon className="animate-spin text-dark-or-light-secondary" />
-              ) : (
-                "ENVIAR"
-              )}
+              ENVIAR
             </button>
-            {returnMessage && (
-              <p className="text-dark-or-light-secondary">{returnMessage}</p>
-            )}
-            {returnMessage && (
-              <Confetti initialVelocityY={1} />
-            )}
+            {showConfetti && <Confetti initialVelocityY={1} />}
           </form>
         </div>
+        <ToastContainer
+          position="bottom-left"
+          autoClose={4000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick={false}
+          rtl={false}
+          pauseOnFocusLoss={false}
+          draggable={false}
+          pauseOnHover={false}
+          theme="dark"
+          transition={Bounce}
+        />
       </>
     </Container>
   );
