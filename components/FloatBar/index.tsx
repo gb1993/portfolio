@@ -30,6 +30,10 @@ const FloatBar = () => {
     { link: "/contato", text: "FALE", highlight: "COMIGO" },
   ];
   const currentTitle = title.find((item) => item.link === pathname);
+  const headerMobileBG = `${
+    mode === "dark" ? "bg-black-secondary" : "bg-white"
+  }`;
+  const headerMobileCss = `${headerMobileBG} w-full flex items-center justify-between lg:hidden fixed top-0 z-[11] animate-opacity-page py-2 px-4 border-b border-dark-or-light-secondary`;
   return (
     <>
       <header className="hidden lg:block fixed top-1/2 right-4 -translate-y-1/2 z-10 animate-opacity-page">
@@ -109,7 +113,7 @@ const FloatBar = () => {
           </li>
         </ul>
       </header>
-      <header className="flex items-center justify-between lg:hidden fixed top-0 z-[11] animate-opacity-page bg-black-secondary w-full py-2 px-4">
+      <header className={headerMobileCss}>
         <h1 className="text-dark-or-light-secondary text-2xl font-extrabold">
           {currentTitle ? currentTitle.text : "HOME"}
           <span className="text-primary ml-2">
@@ -118,7 +122,7 @@ const FloatBar = () => {
         </h1>
         <DrawerProvider>
           <AnimatedHamburgerButton />
-          <Drawer />
+          <Drawer bg={headerMobileBG} />
         </DrawerProvider>
       </header>
     </>

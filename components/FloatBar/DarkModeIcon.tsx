@@ -17,6 +17,7 @@ const DarModeIcon: React.FC<DarModeIconProps> = ({ darkMode }) => {
           transition: "transform 0.4s ease-in-out",
           transform: darkMode ? "scale(1)" : "scale(0)",
         }}
+        className="text-dark-or-light-secondary lg:text-inherit"
       />
       <DarkModeIcon
         sx={{
@@ -27,6 +28,7 @@ const DarModeIcon: React.FC<DarModeIconProps> = ({ darkMode }) => {
           transition: "transform 0.4s ease-in-out",
           transform: darkMode ? "scale(0)" : "scale(1)",
         }}
+        className="text-dark-or-light-secondary lg:text-inherit"
       />
     </div>
   );
