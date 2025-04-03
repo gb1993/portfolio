@@ -18,12 +18,19 @@ import Link from "next/link";
 import AnimatedHamburgerButton from "../MenuHamburguer";
 import Drawer from "../Drawer";
 import { DrawerProvider } from "@/context/DrawerContext";
+import Title from "../Title";
 
 const FloatBar = () => {
   const { setColor, mode, toggleMode } = useColor();
   const pathname = usePathname();
   const isActive = (href: string) => pathname === href;
-
+  const title = [
+    { link: "/", text: "HOME", highlight: "" },
+    { link: "/sobre", text: "SOBRE", highlight: "MIM" },
+    { link: "/trabalhos", text: "MEU", highlight: "PORTFÓLIO" },
+    { link: "/contato", text: "FALE", highlight: "COMIGO" },
+  ];
+  const currentTitle = title.find((item) => item.link === pathname);
   return (
     <>
       <header className="hidden lg:block fixed top-1/2 right-4 -translate-y-1/2 z-10 animate-opacity-page">
@@ -103,7 +110,13 @@ const FloatBar = () => {
           </li>
         </ul>
       </header>
-      <header className="lg:hidden fixed top-3 z-[11] right-4 animate-opacity-page">
+      <header className="flex items-center justify-between lg:hidden fixed top-0 z-[11] animate-opacity-page bg-black-secondary w-full py-2 px-4">
+        <h1 className="text-dark-or-light-secondary text-2xl font-extrabold">
+          {currentTitle ? currentTitle.text : "HOME"}
+          <span className="text-primary ml-2">
+            {currentTitle ? currentTitle.highlight : ""}
+          </span>
+        </h1>
         <DrawerProvider>
           <AnimatedHamburgerButton />
           <Drawer />

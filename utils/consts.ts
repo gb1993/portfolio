@@ -76,7 +76,7 @@ export const academic = [
     title: "HAKATHON",
     place: "SANTANDER",
     description:
-      "Uma expêriencia única de criar soluções em tempo recorde(2 dias) onde meu time desenvolveu uma alternativa de crédito para gamers em marketplaces. O mais legal é que ficamos em quarto lugar!",
+      "Uma expêriencia única de criar soluções completas em tempo recorde onde meu time desenvolveu uma alternativa de crédito para gamers em marketplaces. O mais legal é que ficamos em 4° lugar!",
   },
   {
     timeOn: "2022 - 2023",

@@ -16,7 +16,7 @@ const AnimatedHamburgerButton = () => {
         initial={false}
         animate={active ? "open" : "closed"}
         onClick={() => setActive((pv) => !pv)}
-        className="relative h-[50px] w-10 outline-none"
+        className="relative h-[50px] w-10 outline-none float-end z-[11]"
       >
         <motion.span
           variants={VARIANTS.top}
