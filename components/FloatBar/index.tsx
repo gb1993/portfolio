@@ -16,6 +16,7 @@ import {
 } from "@/utils/consts";
 import Link from "next/link";
 import MenuIcon from "@mui/icons-material/Menu";
+import AnimatedHamburgerButton from "../MenuHamburguer";
 
 const FloatBar = () => {
   const { setColor, mode, toggleMode } = useColor();
@@ -101,13 +102,8 @@ const FloatBar = () => {
           </li>
         </ul>
       </header>
-      <header className="lg:hidden fixed top-4 z-[11] right-4 animate-opacity-page">
-        <button className="cursor-pointer">
-          <MenuIcon
-            className="text-dark-or-light-secondary"
-            sx={{ width: 34, height: 40 }}
-          />
-        </button>
+      <header className="lg:hidden fixed top-3 z-[11] right-4 animate-opacity-page">
+        <AnimatedHamburgerButton />
       </header>
     </>
   );

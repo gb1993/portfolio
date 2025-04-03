@@ -10,7 +10,9 @@ export default function Home() {
 
   return (
     <main className="w-full h-dvh flex flex-col justify-center max-w-[800px] m-auto px-4 animate-opacity-page">
-      <Title title="Home" />
+      <div className="lg:hidden">
+        <Title title="HOME" />
+      </div>
       <h3
         className="text-lg text-dark-or-light-secondary"
         title="Baseado no horário de brasília"
