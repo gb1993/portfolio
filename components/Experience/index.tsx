@@ -4,12 +4,12 @@ import SchoolIcon from "@mui/icons-material/School";
 
 const Experience = () => {
   return (
-    <div className="flex justify-between mt-7">
-      <div className="flex flex-col justify-between w-full max-w-[540px]">
+    <div className="flex flex-col md:flex-row justify-between mt-7">
+      <div className="flex flex-col justify-between w-full max-w-full lg:max-w-[540px]">
         {xp.map((item, i) => (
           <div key={i} className="flex gap-4 mb-12">
             <div className={xpIconContainerCss}>
-              <BadgeIcon className="text-primary z-[2]" />
+              <BadgeIcon className="text-primary z-[2] bg-dark-or-light-primary !transition-colors !duration-500" />
             </div>
             <div>
               <h4 className={xpTagCss}>{item.timeOn}</h4>
@@ -26,11 +26,11 @@ const Experience = () => {
           </div>
         ))}
       </div>
-      <div className="flex flex-col justify-between w-full max-w-[540px]">
+      <div className="flex flex-col justify-between w-full max-w-full lg:max-w-[540px]">
         {academic.map((item, i) => (
           <div key={i} className="flex gap-4 mb-12">
             <div className={xpIconContainerCss}>
-              <SchoolIcon className="text-primary z-[2]" />
+              <SchoolIcon className="text-primary z-[2] bg-dark-or-light-primary !transition-colors !duration-500" />
             </div>
             <div>
               <h4 className={xpTagCss}>{item.timeOn}</h4>

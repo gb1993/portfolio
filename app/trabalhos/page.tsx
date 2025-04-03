@@ -8,7 +8,7 @@ const Trabalhos = () => {
   return (
     <Container>
       <Title backTitle="TRABALHO" title="MEU" highlight="PORTFÓLIO" />
-      <div className="mt-13 w-full grid grid-cols-4 gap-13 items-center grid-rows-none">
+      <div className="mt-24 w-full grid grid-cols-4 gap-3 lg:gap-13 items-center lg:grid-rows-none">
         <Link
           href="https://andina.nasuacasa.coca-cola.com.br/"
           target="_blank"
@@ -89,7 +89,7 @@ const Trabalhos = () => {
           href="https://creamy.com.br/"
           target="_blank"
           title="Creamy"
-          className="col-start-4 group"
+          className="col-start-4 group mt-13 lg:mt-0"
         >
           <svg
             width="190"
@@ -166,7 +166,7 @@ const Trabalhos = () => {
           href="https://dermage.com.br/"
           target="_blank"
           title="Dermage"
-          className="row-start-2 fill-[#ff8400] group"
+          className="row-start-2 fill-[#ff8400] group mt-13 lg:mt-0"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -205,7 +205,7 @@ const Trabalhos = () => {
           href="https://www.candide.com.br/"
           target="_blank"
           title="Candide"
-          className="row-start-3 group"
+          className="row-start-3 group mt-13 lg:mt-0"
         >
           <Image
             src="/candide.png"
@@ -243,7 +243,7 @@ const Trabalhos = () => {
           href="https://www.ultrafeu.com.br/"
           target="_blank"
           title="Ultrafeu"
-          className="row-start-3 group"
+          className="row-start-3 group mt-13 lg:mt-0"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -405,7 +405,7 @@ const Trabalhos = () => {
           href="https://www.vitaminese.com.br/"
           target="_blank"
           title="Vitaminise"
-          className="row-start-4"
+          className="row-start-4 mt-13 lg:mt-0"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -520,7 +520,7 @@ const Trabalhos = () => {
           href="https://www.digaspi.com.br/"
           target="_blank"
           title="Digaspi"
-          className="row-start-4"
+          className="row-start-4 mt-13 lg:mt-0"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -589,7 +589,7 @@ const Trabalhos = () => {
           href="https://slowbeauty.com.br/"
           target="_blank"
           title="Slowbeauty"
-          className="row-start-5"
+          className="row-start-5 mt-13 lg:mt-0"
         >
           <svg
             width="89"

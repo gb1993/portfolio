@@ -3,12 +3,14 @@
 import { Typewriter } from "react-simple-typewriter";
 import getGreetings from "../utils/getGreeting";
 import ButtonLink from "@/components/ButtonLink";
+import Title from "@/components/Title";
 
 export default function Home() {
   const greet = getGreetings();
 
   return (
     <main className="w-full h-dvh flex flex-col justify-center max-w-[800px] m-auto px-4 animate-opacity-page">
+      <Title title="Home" />
       <h3
         className="text-lg text-dark-or-light-secondary"
         title="Baseado no horário de brasília"

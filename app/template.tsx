@@ -3,7 +3,7 @@ import PageTransition from "@/components/PageTransition";
 
 export default function Template({ children }: { children: React.ReactNode }) {
   return (
-    <div className="min-w-dvh relative overflow-hidden">
+    <div className="w-full relative overflow-hidden">
       <PageTransition />
       <FloatBar />
       {children}

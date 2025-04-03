@@ -1,6 +1,13 @@
 import Container from "@/components/Container";
 import Title from "@/components/Title";
-import { socialMediaIconCss } from "@/utils/consts";
+import {
+  aboutKeyCss,
+  aboutMetricBoxCss,
+  aboutMetricBoxTextCss,
+  aboutMetricBoxYearsCss,
+  aboutValueCss,
+  socialMediaIconCss,
+} from "@/utils/consts";
 import Link from "next/link";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
@@ -11,19 +18,11 @@ import TecsChart from "@/components/TecsChart";
 import Experience from "@/components/Experience";
 
 const Sobre = () => {
-  const aboutKeyCss = "text-dark-or-light-secondary/60";
-  const aboutValueCss = "text-dark-or-light-secondary mb-4";
-  const aboutMetricBoxCss =
-    "w-full max-w-[240px] border rounded-sm border-black-secondary pt-5 pr-[30px] pb-[25px] pl-10";
-  const aboutMetricBoxYearsCss = `relative text-primary font-bold text-5xl after:content-["+"] after:absolute after:text-primary after:text-3xl after:font-normal`;
-  const aboutMetricBoxTextCss =
-    "relative pl-10 text-dark-or-light-secondary text-sm before:content-[''] before:absolute before:left-0 before:top-3 before:flex before:bg-dark-or-light-secondary before:w-7 before:h-[1px]";
-
   return (
     <Container>
       <>
         <Title backTitle="RESUMO" title="SOBRE" highlight="MIM" />
-        <section className="flex justify-between gap-13 w-full">
+        <section className="flex justify-between flex-col lg:flex-row gap-13 w-full mt-24 lg:mt-0">
           <div className="w-full flex justify-between flex-col">
             <TitleSecondary text="INFORMAÇÕES PESSOAIS" />
             <div className="flex justify-between">
@@ -83,13 +82,15 @@ const Sobre = () => {
                 </svg>
               </Link>
             </div>
+            <div className="mt-10 lg:mt-0">
             <ButtonLink
               link="/Currículo-Gabriel-Branco.pdf"
               text="BAIXAR CV"
               download={true}
             />
+            </div>
           </div>
-          <div className="w-full flex flex-wrap gap-6 justify-end">
+          <div className="w-full flex flex-wrap gap-6 justify-center lg:justify-end">
             <div className={aboutMetricBoxCss}>
               <h3 className={aboutMetricBoxYearsCss}>3</h3>
               <p className={aboutMetricBoxTextCss}>ANOS DE EXPERIÊNCIA</p>
@@ -105,7 +106,7 @@ const Sobre = () => {
           </div>
         </section>
         <Divide />
-        <section>
+        <section className="max-w-7xl w-full">
           <TitleSecondary text="HARD SKILLS" align="center" />
           <TecsChart />
         </section>

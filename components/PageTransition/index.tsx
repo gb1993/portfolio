@@ -1,13 +1,13 @@
 "use client";
 import { useEffect } from "react";
 import { motion } from "framer-motion";
-
-const delays = [0.14, 0.28, 0.42, 0.56, 0.7, 0.84, 1.08];
+import { delays } from "@/utils/consts";
 
 const PageTransition = () => {
   useEffect(() => {
     const originalStyle = document.body.style.overflow;
     document.body.style.overflow = "hidden";
+    window.scrollTo(0, 0);
 
     const timer = setTimeout(() => {
       document.body.style.overflow = originalStyle;

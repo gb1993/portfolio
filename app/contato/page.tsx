@@ -53,7 +53,7 @@ const Contato = () => {
     <Container>
       <>
         <Title backTitle="CONTATO" title="FALE" highlight="COMIGO" />
-        <div className="w-full flex justify-between gap-7 flex-col lg:flex-row">
+        <div className="w-full flex justify-between gap-7 flex-col lg:flex-row mt-24 lg:mt-0">
           <div className="w-full lg:max-w-1/3">
             <TitleSecondary text="NÃO TENHA VERGONHA!" />
             <p className="text-dark-or-light-secondary mb-4 text-sm leading-normal">
