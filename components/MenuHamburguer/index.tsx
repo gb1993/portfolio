@@ -1,14 +1,14 @@
 "use client";
-import { useState } from "react";
 import { MotionConfig, motion } from "framer-motion";
+import { useDrawerContext } from "@/context/DrawerContext";
 
 const AnimatedHamburgerButton = () => {
-  const [active, setActive] = useState(false);
+  const { active, setActive } = useDrawerContext();
 
   return (
     <MotionConfig
       transition={{
-        duration: 0.5,
+        duration: 0.4,
         ease: "easeInOut",
       }}
     >
