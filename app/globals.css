@@ -104,6 +104,6 @@
 }
 @media (max-width: 1024px) {
   .recharts-cartesian-axis-tick {
-    font-size: 12px;
+    font-size: 11px;
   }
 }

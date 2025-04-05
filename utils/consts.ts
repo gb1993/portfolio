@@ -83,7 +83,7 @@ export const academic = [
     title: "CURSO DESENVOLVIMENTO WEB",
     place: "TRYBE",
     description:
-      "Curso completo de desenvolvimento web com conteúdo de frontend, backend, python, node, docker, mongodb e sql",
+      "Curso completo de desenvolvimento web com conteúdo de frontend, backend e docker",
   },
   {
     timeOn: "2014 - 2018",
