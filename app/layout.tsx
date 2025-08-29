@@ -2,6 +2,7 @@ import { Poppins } from "next/font/google";
 import { ColorProvider } from "../context/ColorContext";
 import ThemeBody from "@/components/ThemeBody";
 import "./globals.css";
+import { Analytics } from "@vercel/analytics/next"
 
 export const metadata = {
   title: "Portfólio",
@@ -22,6 +23,7 @@ export default function RootLayout({
     <ColorProvider>
       <html lang="pt-br">
         <ThemeBody font={poppins.className}>{children}</ThemeBody>
+        <Analytics />
       </html>
     </ColorProvider>
   );
