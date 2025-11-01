@@ -5,6 +5,7 @@
   --color-black-secondary: #2b2a2a;
   --color-dark-or-light-primary: #111111;
   --color-dark-or-light-secondary: #ffffff;
+  --filter-bright-primary: invert(0);
   --animate-opacity-page: opacity-page 3s ease-in-out;
   @keyframes opacity-page {
     0% {
@@ -47,10 +48,12 @@
 .mode-light {
   --color-dark-or-light-primary: #ffffff;
   --color-dark-or-light-secondary: #111111;
+  --filter-bright-primary: invert(0);
 }
 .mode-dark {
   --color-dark-or-light-primary: #111111;
   --color-dark-or-light-secondary: #ffffff;
+  --filter-bright-primary: invert(1);
 }
 @keyframes page-transition {
   0% {

@@ -96,8 +96,8 @@ const Sobre = () => {
               <p className={aboutMetricBoxTextCss}>ANOS DE EXPERIÊNCIA</p>
             </div>
             <div className={aboutMetricBoxCss}>
-              <h3 className={aboutMetricBoxYearsCss}>16</h3>
-              <p className={aboutMetricBoxTextCss}>PROJETOS PARTICIPADOS</p>
+              <h3 className={aboutMetricBoxYearsCss}>21</h3>
+              <p className={aboutMetricBoxTextCss}>PROJETOS PUBLICADOS</p>
             </div>
             <div className={aboutMetricBoxCss}>
               <h3 className={aboutMetricBoxYearsCss}>3</h3>
