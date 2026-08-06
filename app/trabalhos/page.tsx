@@ -8,7 +8,15 @@ const Trabalhos = () => {
   return (
     <Container>
       <Title backTitle="TRABALHO" title="MEU" highlight="PORTFÓLIO" />
-      <div className="mt-24 w-full grid grid-cols-4 gap-3 lg:gap-13 items-center lg:grid-rows-none">
+      <p className="mx-auto max-w-3xl text-center text-dark-or-light-secondary leading-7 mt-24 lg:-mt-8 mb-14">
+        Uma seleção de lojas virtuais, sites institucionais e experiências
+        digitais que desenvolvi para marcas de diferentes segmentos. Acesse
+        cada projeto para conhecer o resultado publicado.
+      </p>
+      <section
+        aria-label="Projetos publicados"
+        className="w-full grid grid-cols-4 gap-3 lg:gap-13 items-center lg:grid-rows-none"
+      >
         <Link
           href="https://andina.nasuacasa.coca-cola.com.br/"
           target="_blank"
@@ -1238,7 +1246,7 @@ const Trabalhos = () => {
             className={logoCss}
           />
         </Link>
-      </div>
+      </section>
     </Container>
   );
 };

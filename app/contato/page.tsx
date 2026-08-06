@@ -78,7 +78,11 @@ const Contato = () => {
               projetos inovadores.
             </p>
             <div>
-              <a href="https://wa.me/5521982126050" target="_blank">
+              <a
+                href="https://wa.me/5521982126050"
+                target="_blank"
+                aria-label="Conversar com Gabriel Branco pelo WhatsApp"
+              >
                 <div className="flex items-center gap-4 mb-4">
                   <WhatsAppIcon
                     className="text-primary"
@@ -94,7 +98,11 @@ const Contato = () => {
                   </div>
                 </div>
               </a>
-              <div className="flex items-center gap-4 mb-4">
+              <a
+                href="mailto:gabriel@gbdev.pro"
+                className="flex items-center gap-4 mb-4"
+                aria-label="Enviar e-mail para Gabriel Branco"
+              >
                 <MailOutlineIcon
                   className="text-primary"
                   sx={{ width: "40px", height: "40px" }}
@@ -107,7 +115,7 @@ const Contato = () => {
                     gabriel@gbdev.pro
                   </p>
                 </div>
-              </div>
+              </a>
             </div>
           </div>
           <form
@@ -157,7 +165,10 @@ const Contato = () => {
                 className={contactTextAreaCss}
               />
             </label>
-            <button className="cursor-pointer hover:bg-primary font-bold w-full lg:w-fit flex items-center justify-center text-dark-or-light-secondary border-2 border-primary px-12 py-2 rounded-full">
+            <button
+              type="submit"
+              className="cursor-pointer hover:bg-primary font-bold w-full lg:w-fit flex items-center justify-center text-dark-or-light-secondary border-2 border-primary px-12 py-2 rounded-full"
+            >
               ENVIAR
             </button>
             {showConfetti && <Confetti initialVelocityY={1} />}

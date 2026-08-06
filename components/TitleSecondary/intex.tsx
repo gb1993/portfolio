@@ -10,11 +10,11 @@ const TitleSecondary = ({ text, align = "left" }: Props) => {
     right: "text-right",
   };
   return (
-    <h3
+    <h2
       className={`mb-4 text-dark-or-light-secondary text-2xl font-semibold ${textPosition[align]}`}
     >
       {text}
-    </h3>
+    </h2>
   );
 };
 

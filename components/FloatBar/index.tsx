@@ -128,12 +128,12 @@ const FloatBar = () => {
         </ul>
       </header>
       <header className={headerMobileCss}>
-        <h1 className="text-dark-or-light-secondary text-2xl font-extrabold">
+        <p className="text-dark-or-light-secondary text-2xl font-extrabold">
           {currentTitle ? currentTitle.text : "HOME"}
           {currentTitle && currentTitle.highlight && (
             <span className="text-primary ml-2">{currentTitle.highlight}</span>
           )}
-        </h1>
+        </p>
         <DrawerProvider>
           <AnimatedHamburgerButton />
           <Drawer bg={headerMobileBG} />

@@ -32,7 +32,7 @@ const Sobre = () => {
                   Gabriel Branco
                 </p>
                 <p className={aboutValueCss}>
-                  <span className={aboutKeyCss}>Cidade:</span> Rio de janeiro
+                  <span className={aboutKeyCss}>Cidade:</span> Rio de Janeiro
                 </p>
               </div>
               <div>
@@ -49,6 +49,7 @@ const Sobre = () => {
               <Link
                 href={"https://www.linkedin.com/in/gabriel-branco/"}
                 target="_blank"
+                aria-label="LinkedIn de Gabriel Branco"
                 className={socialMediaIconCss}
               >
                 <LinkedInIcon className="text-white" sx={{ width: 18 }} />
@@ -56,6 +57,7 @@ const Sobre = () => {
               <Link
                 href={"https://github.com/gb1993"}
                 target="_blank"
+                aria-label="GitHub de Gabriel Branco"
                 className={socialMediaIconCss}
               >
                 <GitHubIcon className="text-white" sx={{ width: 18 }} />
@@ -65,6 +67,7 @@ const Sobre = () => {
                 target="_blank"
                 className={socialMediaIconCss}
                 title="Me desafie no xadrez!"
+                aria-label="Perfil de Gabriel Branco no Chess.com"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -96,7 +99,7 @@ const Sobre = () => {
               <p className={aboutMetricBoxTextCss}>ANOS DE EXPERIÊNCIA</p>
             </div>
             <div className={aboutMetricBoxCss}>
-              <h3 className={aboutMetricBoxYearsCss}>21</h3>
+              <h3 className={aboutMetricBoxYearsCss}>22</h3>
               <p className={aboutMetricBoxTextCss}>PROJETOS PUBLICADOS</p>
             </div>
             <div className={aboutMetricBoxCss}>
