@@ -104,7 +104,7 @@ const Contato = () => {
                     ME ENVIE UM EMAIL
                   </h4>
                   <p className="text-dark-or-light-secondary text-sm">
-                    gbdev1993@gmail.com
+                    gabriel@gbdev.pro
                   </p>
                 </div>
               </div>

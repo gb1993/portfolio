@@ -41,7 +41,7 @@ const Sobre = () => {
                 </p>
                 <p className={aboutValueCss}>
                   <span className={aboutKeyCss}>Email:</span>{" "}
-                  gbdev1993@gmail.com
+                  gabriel@gbdev.pro
                 </p>
               </div>
             </div>

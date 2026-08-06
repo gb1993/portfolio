@@ -1224,6 +1224,20 @@ const Trabalhos = () => {
             </defs>
           </svg>
         </Link>
+        <Link
+          href="https://espacosmart.com.br/"
+          target="_blank"
+          title="Espaço Smart"
+          className="row-start-7"
+        >
+          <Image
+            src="https://lojaespacosmart.vtexassets.com/assets/vtex.file-manager-graphql/images/58ed258a-9604-4399-ba85-597771230253___10bbb4bf0f0652e232da292d41108869.png"
+            alt="Espaço Smart"
+            width={4096}
+            height={1862}
+            className={logoCss}
+          />
+        </Link>
       </div>
     </Container>
   );
