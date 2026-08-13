@@ -5,29 +5,37 @@ import getGreetings from "../utils/getGreeting";
 import ButtonLink from "@/components/ButtonLink";
 import WorkOutlineRoundedIcon from "@mui/icons-material/WorkOutlineRounded";
 import PersonOutlineRoundedIcon from "@mui/icons-material/PersonOutlineRounded";
+import { useEffect, useState } from "react";
 
 export default function Home() {
   const greet = getGreetings();
+  const [hasMounted, setHasMounted] = useState(false);
+
+  useEffect(() => setHasMounted(true), []);
 
   return (
     <main className="w-full h-dvh flex flex-col justify-center max-w-[800px] m-auto px-4 animate-opacity-page">
-      <h3
+      <p
         className="text-lg text-dark-or-light-secondary"
         title="Baseado no horário de brasília"
       >
-        {greet}
-      </h3>
+        <span className="font-semibold text-primary">GBDEV</span> · {greet}
+      </p>
       <h1 className="block h-20 text-4xl text-dark-or-light-secondary font-bold mt-4 mb-2">
         GABRIEL BRANCO, {" "}
         <span className="text-primary">
-          <Typewriter
-            words={[
-              "DESENVOLVEDOR FRONT-END.",
-              "ESPECIALISTA EM E-COMMERCE.",
-            ]}
-            loop={false}
-            cursor={true}
-          />
+          {hasMounted ? (
+            <Typewriter
+              words={[
+                "DESENVOLVEDOR FRONT-END.",
+                "ESPECIALISTA EM E-COMMERCE.",
+              ]}
+              loop={false}
+              cursor={true}
+            />
+          ) : (
+            "DESENVOLVEDOR FRONT-END."
+          )}
         </span>
       </h1>
       <p className="text-dark-or-light-secondary mb-8">

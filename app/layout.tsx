@@ -6,21 +6,25 @@ import "./globals.css";
 import { Analytics } from "@vercel/analytics/next";
 
 const siteUrl = "https://www.gbdev.pro";
+const siteName = "GBDEV";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Gabriel Branco | Desenvolvedor Front-end",
-    template: "%s | Gabriel Branco",
+    default: "GBDEV | Gabriel Branco — Desenvolvedor Front-end",
+    template: "%s | GBDEV",
   },
   description:
-    "Portfólio de Gabriel Branco, desenvolvedor front-end no Rio de Janeiro especializado em e-commerce, React, TypeScript, VTEX e Shopify.",
-  applicationName: "Portfólio Gabriel Branco",
+    "GBDEV é o portfólio de Gabriel Branco, desenvolvedor front-end no Rio de Janeiro especializado em e-commerce, React, TypeScript, VTEX e Shopify.",
+  applicationName: "GBDEV — Portfólio Gabriel Branco",
   authors: [{ name: "Gabriel Branco", url: siteUrl }],
   creator: "Gabriel Branco",
   publisher: "Gabriel Branco",
   category: "technology",
   keywords: [
+    "GBDEV",
+    "gbdev.pro",
+    "GBDEV Gabriel Branco",
     "Gabriel Branco",
     "desenvolvedor front-end",
     "desenvolvedor React",
@@ -37,14 +41,14 @@ export const metadata: Metadata = {
     type: "website",
     locale: "pt_BR",
     url: siteUrl,
-    siteName: "Portfólio Gabriel Branco",
-    title: "Gabriel Branco | Desenvolvedor Front-end",
+    siteName,
+    title: "GBDEV | Gabriel Branco — Desenvolvedor Front-end",
     description:
-      "Projetos, experiência e trajetória de Gabriel Branco em desenvolvimento front-end para e-commerce.",
+      "GBDEV reúne os projetos, a experiência e a trajetória de Gabriel Branco em desenvolvimento front-end para e-commerce.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Gabriel Branco | Desenvolvedor Front-end",
+    title: "GBDEV | Gabriel Branco — Desenvolvedor Front-end",
     description:
       "Projetos, experiência e trajetória em front-end, e-commerce, React e TypeScript.",
   },
@@ -116,7 +120,10 @@ export default function RootLayout({
         "@type": "WebSite",
         "@id": `${siteUrl}/#website`,
         url: siteUrl,
-        name: "Portfólio Gabriel Branco",
+        name: siteName,
+        alternateName: ["Portfólio Gabriel Branco", "gbdev.pro"],
+        description:
+          "Portfólio profissional de Gabriel Branco, desenvolvedor front-end especializado em e-commerce.",
         inLanguage: "pt-BR",
         author: { "@id": `${siteUrl}/#person` },
       },

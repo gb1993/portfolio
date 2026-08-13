@@ -2,9 +2,9 @@ import type { MetadataRoute } from "next";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: "Portfólio Gabriel Branco",
-    short_name: "Gabriel Branco",
-    description: "Portfólio profissional de Gabriel Branco, desenvolvedor front-end.",
+    name: "GBDEV — Portfólio Gabriel Branco",
+    short_name: "GBDEV",
+    description: "GBDEV é o portfólio profissional de Gabriel Branco, desenvolvedor front-end.",
     start_url: "/",
     display: "standalone",
     background_color: "#111111",

@@ -22,16 +22,17 @@ const Sobre = () => {
   return (
     <Container>
       <>
-        <Title backTitle="RESUMO" title="SOBRE" highlight="MIM" />
+        <Title backTitle="PERFIL" title="GABRIEL" highlight="BRANCO" />
         <section className="flex justify-between flex-col lg:flex-row gap-13 w-full mt-24 lg:mt-0">
           <div className="w-full flex justify-between flex-col">
             <TitleSecondary text="PERFIL PROFISSIONAL" />
             <p className="max-w-2xl text-dark-or-light-secondary leading-7 mb-8">
-              Desenvolvedor front-end pleno com experiência na construção e
-              evolução de e-commerces. Ao longo da minha trajetória, combinei
-              desenvolvimento, integrações e conhecimento de diferentes
-              plataformas para acelerar entregas, melhorar performance e criar
-              novas oportunidades para as empresas em que atuei.
+              Gabriel Branco é desenvolvedor front-end pleno com experiência na
+              construção e evolução de e-commerces. Ao longo da minha
+              trajetória, combinei desenvolvimento, integrações e conhecimento
+              de diferentes plataformas para acelerar entregas, melhorar
+              performance e criar novas oportunidades para as empresas em que
+              atuei.
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8">
               <div>

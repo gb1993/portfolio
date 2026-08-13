@@ -1,6 +1,6 @@
 import { ImageResponse } from "next/og";
 
-export const alt = "Gabriel Branco — Desenvolvedor Front-end";
+export const alt = "GBDEV — Gabriel Branco, Desenvolvedor Front-end";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -20,7 +20,7 @@ export default function OpenGraphImage() {
       }}
     >
       <div style={{ color: "#febb32", fontSize: 30, fontWeight: 700 }}>
-        PORTFÓLIO
+        GBDEV · PORTFÓLIO
       </div>
       <div style={{ fontSize: 76, fontWeight: 800, marginTop: 20 }}>
         Gabriel Branco
