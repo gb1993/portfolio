@@ -120,8 +120,10 @@ const Sobre = () => {
           </div>
         </section>
         <Divide />
-        <section className="max-w-7xl w-full">
-          <TitleSecondary text="TECNOLOGIAS & PLATAFORMAS" align="center" />
+        <section className="max-w-7xl w-full" aria-labelledby="tech-title">
+          <div id="tech-title">
+            <TitleSecondary text="TECNOLOGIAS & PLATAFORMAS" align="center" />
+          </div>
           <TecsChart />
         </section>
         <Divide />

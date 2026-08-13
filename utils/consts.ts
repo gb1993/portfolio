@@ -117,6 +117,13 @@ export const xp = [
 ];
 export const academic = [
   {
+    timeOn: "2022",
+    title: "Hackathon",
+    place: "Santander",
+    description:
+      "Desenvolvi com meu time uma alternativa de crédito para gamers em marketplaces, criando uma solução completa em tempo reduzido. O projeto conquistou o 4º lugar na competição.",
+  },
+  {
     timeOn: "01/2014 - 06/2017",
     title: "Análise e Desenvolvimento de Sistemas",
     place: "UniCarioca",
