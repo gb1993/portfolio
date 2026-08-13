@@ -3,6 +3,8 @@
 import { Typewriter } from "react-simple-typewriter";
 import getGreetings from "../utils/getGreeting";
 import ButtonLink from "@/components/ButtonLink";
+import WorkOutlineRoundedIcon from "@mui/icons-material/WorkOutlineRounded";
+import PersonOutlineRoundedIcon from "@mui/icons-material/PersonOutlineRounded";
 
 export default function Home() {
   const greet = getGreetings();
@@ -15,13 +17,13 @@ export default function Home() {
       >
         {greet}
       </h3>
-      <h1 className="text-4xl text-dark-or-light-secondary font-bold mt-4 mb-2">
+      <h1 className="block h-20 text-4xl text-dark-or-light-secondary font-bold mt-4 mb-2">
         GABRIEL BRANCO, {" "}
         <span className="text-primary">
           <Typewriter
             words={[
               "DESENVOLVEDOR FRONT-END.",
-              "SOLUCIONADOR DE PROBLEMAS.",
+              "ESPECIALISTA EM E-COMMERCE.",
             ]}
             loop={false}
             cursor={true}
@@ -29,12 +31,26 @@ export default function Home() {
         </span>
       </h1>
       <p className="text-dark-or-light-secondary mb-8">
-        Apaixonado por tecnologia desde que me entendo por gente, estudei as
-        mais diversas áreas do ramo. Sou desenvolvedor front-end especializado
-        em React, Next.js e TypeScript, com experiência na criação e no
-        aprimoramento de lojas virtuais, sites e experiências web.
+        Há quase 10 anos atuo com tecnologia e, nos últimos 3, me especializei
+        em desenvolvimento front-end para e-commerce. Crio e evoluo lojas
+        virtuais rápidas e escaláveis, conectando experiência do usuário,
+        performance e resultados de negócio em plataformas como VTEX, Shopify,
+        Deco e Uappi.
       </p>
-      <ButtonLink text="SAIBA MAIS" target="_self" link="/sobre" />
+      <div className="flex flex-col gap-4 sm:flex-row">
+        <ButtonLink
+          text="VER PROJETOS"
+          target="_self"
+          link="/trabalhos"
+          icon={<WorkOutlineRoundedIcon fontSize="small" />}
+        />
+        <ButtonLink
+          text="SOBRE MIM"
+          target="_self"
+          link="/sobre"
+          icon={<PersonOutlineRoundedIcon fontSize="small" />}
+        />
+      </div>
     </main>
   );
 }

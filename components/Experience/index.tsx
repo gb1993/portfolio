@@ -22,6 +22,21 @@ const Experience = () => {
               <p className="text-dark-or-light-secondary text-xs leading-5">
                 {item.description}
               </p>
+              {item.technologies && (
+                <ul
+                  className="flex flex-wrap gap-2 mt-3"
+                  aria-label="Tecnologias utilizadas"
+                >
+                  {item.technologies.map((technology) => (
+                    <li
+                      key={technology}
+                      className="text-[11px] text-dark-or-light-secondary/80 border border-dark-or-light-secondary/20 rounded-full px-2 py-1"
+                    >
+                      {technology}
+                    </li>
+                  ))}
+                </ul>
+              )}
             </div>
           </div>
         ))}

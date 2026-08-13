@@ -36,61 +36,92 @@ export const themes = [
   { color: "#72b626", value: "green" },
   { color: "#f72b1c", value: "red" },
 ];
-export const dataChart = [
-  { tech: "Tailwind", senior: 10 },
-  { tech: "Next", pleno: 8 },
-  { tech: "React", pleno: 8 },
-  { tech: "VTEX", pleno: 8 },
-  { tech: "Redux", pleno: 8 },
-  { tech: "TypeScript", pleno: 8 },
-  { tech: "Jest", junior: 3 },
-  { tech: "Node", junior: 3 },
-  { tech: "JavaScript", senior: 10 },
+export const techGroups = [
+  {
+    title: "Front-end",
+    technologies: [
+      "React",
+      "TypeScript",
+      "JavaScript",
+      "Preact",
+      "Vue",
+      "Sass",
+      "Tailwind CSS",
+      "Storybook",
+    ],
+  },
+  {
+    title: "E-commerce",
+    technologies: ["VTEX", "Shopify", "Deco", "Uappi"],
+  },
+  {
+    title: "Integrações & arquitetura",
+    technologies: [
+      "REST APIs",
+      "GraphQL",
+      "Node.js",
+      "React Query",
+      "Design systems",
+    ],
+  },
+  {
+    title: "Ferramentas & processos",
+    technologies: ["Git", "GitKraken", "Jira", "Monday"],
+  },
 ];
 export const xp = [
   {
-    timeOn: "2024 - Atual",
-    title: "Desenvolvedor Frontend Pl.",
-    place: "We.Digi",
+    timeOn: "04/2024 - Atual",
+    title: "Desenvolvedor Front-end Pleno",
+    place: "We.digi",
     description:
-      "Desenvolver e-commerces usando REACT, Typescript, DECO, VTEX, SASS, Tailwind, DENO, NODE, Melhoria de SEO e otimização de performance",
+      "Reduzi o tempo de desenvolvimento de novos e-commerces com melhorias no boilerplate. Também apliquei minha experiência em diferentes CMSs para diversificar a carteira de clientes e contribuir para o aumento do faturamento da agência.",
+    technologies: [
+      "React",
+      "TypeScript",
+      "Preact",
+      "Vue",
+      "VTEX",
+      "Shopify",
+      "Deco",
+      "Uappi",
+      "REST",
+      "GraphQL",
+      "Node.js",
+    ],
   },
   {
-    timeOn: "2022 - 2024",
-    title: "Desenvolvedor Frontend Jr.",
+    timeOn: "11/2022 - 04/2024",
+    title: "Desenvolvedor Front-end Júnior",
     place: "ED3 Digital",
     description:
-      "Desenvolver e-commerces usando REACT, Typescript, VTEX, SASS e Tailwind",
+      "Desenvolvi novos projetos de e-commerce, atuei como responsável técnico em contrato terceirizado por outra agência e implementei melhorias de performance orientadas pelas métricas do Lighthouse.",
+    technologies: [
+      "React",
+      "TypeScript",
+      "Storybook",
+      "React Query",
+      "Sass",
+      "Tailwind CSS",
+      "VTEX",
+    ],
   },
   {
-    timeOn: "2016 - 2021",
-    title: "Analista de sistemas Pl.",
+    timeOn: "08/2016 - 11/2021",
+    title: "Analista de Sistemas Pleno",
     place: "Dermage",
     description:
-      "Implantação, suporte e treinamento em sistemas, desenvolvimento de pequenos sistemas com PHP.",
+      "Desenvolvi um sistema EAN-13 em PHP e MySQL para substituir uma solução legada. Também unifiquei e automatizei o sistema de receitas, eliminando multas recorrentes causadas pela ausência de relatórios para a VISA.",
+    technologies: ["PHP", "MySQL", "Datasul (TOTVS)", "GCOM", "GLPI"],
   },
 ];
 export const academic = [
   {
-    timeOn: "2022",
-    title: "HAKATHON",
-    place: "SANTANDER",
+    timeOn: "01/2014 - 06/2017",
+    title: "Análise e Desenvolvimento de Sistemas",
+    place: "UniCarioca",
     description:
-      "Uma expêriencia única de criar soluções completas em tempo recorde onde meu time desenvolveu uma alternativa de crédito para gamers em marketplaces. O mais legal é que ficamos em 4° lugar!",
-  },
-  {
-    timeOn: "2022 - 2023",
-    title: "CURSO DESENVOLVIMENTO WEB",
-    place: "TRYBE",
-    description:
-      "Curso completo de desenvolvimento web com conteúdo de frontend, backend e docker",
-  },
-  {
-    timeOn: "2014 - 2018",
-    title: "Análise de sistemas",
-    place: "Unicarioca",
-    description:
-      "Onde consegui a base para trilhar a carreira na área de tecnologia.",
+      "Ensino superior interrompido. Formação que estabeleceu a base da minha trajetória profissional em tecnologia.",
   },
 ];
 export const delays = [0.14, 0.28, 0.42, 0.56, 0.7, 0.84, 1.08];

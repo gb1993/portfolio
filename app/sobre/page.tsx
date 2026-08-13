@@ -16,6 +16,7 @@ import TitleSecondary from "@/components/TitleSecondary/intex";
 import Divide from "@/components/Divide";
 import TecsChart from "@/components/TecsChart";
 import Experience from "@/components/Experience";
+import FileDownloadOutlinedIcon from "@mui/icons-material/FileDownloadOutlined";
 
 const Sobre = () => {
   return (
@@ -24,28 +25,37 @@ const Sobre = () => {
         <Title backTitle="RESUMO" title="SOBRE" highlight="MIM" />
         <section className="flex justify-between flex-col lg:flex-row gap-13 w-full mt-24 lg:mt-0">
           <div className="w-full flex justify-between flex-col">
-            <TitleSecondary text="INFORMAÇÕES PESSOAIS" />
-            <div className="flex justify-between">
+            <TitleSecondary text="PERFIL PROFISSIONAL" />
+            <p className="max-w-2xl text-dark-or-light-secondary leading-7 mb-8">
+              Desenvolvedor front-end pleno com experiência na construção e
+              evolução de e-commerces. Ao longo da minha trajetória, combinei
+              desenvolvimento, integrações e conhecimento de diferentes
+              plataformas para acelerar entregas, melhorar performance e criar
+              novas oportunidades para as empresas em que atuei.
+            </p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8">
               <div>
                 <p className={aboutValueCss}>
                   <span className="text-dark-or-light-secondary/60">Nome:</span>{" "}
                   Gabriel Branco
                 </p>
                 <p className={aboutValueCss}>
-                  <span className={aboutKeyCss}>Cidade:</span> Rio de Janeiro
+                  <span className={aboutKeyCss}>Local:</span> Rio de Janeiro ·
+                  Remoto
                 </p>
               </div>
               <div>
                 <p className={aboutValueCss}>
-                  <span className={aboutKeyCss}>Idade:</span> 32 anos
+                  <span className={aboutKeyCss}>Cargo:</span> Desenvolvedor
+                  Front-end Pleno
                 </p>
                 <p className={aboutValueCss}>
-                  <span className={aboutKeyCss}>Email:</span>{" "}
-                  gabriel@gbdev.pro
+                  <span className={aboutKeyCss}>Inglês:</span> Intermediário
+                  (B1)
                 </p>
               </div>
             </div>
-            <div className="flex gap-4 items-center">
+            <div className="flex gap-4 items-center mb-8">
               <Link
                 href={"https://www.linkedin.com/in/gabriel-branco/"}
                 target="_blank"
@@ -85,37 +95,38 @@ const Sobre = () => {
                 </svg>
               </Link>
             </div>
-            <div className="mt-10 lg:mt-0">
-            <ButtonLink
-              link="/Currículo-Gabriel-Branco.pdf"
-              text="BAIXAR CV"
-              download={true}
-            />
+            <div className="mt-12 lg:mt-0">
+              <ButtonLink
+                link="/Currículo-Gabriel-Branco.pdf"
+                text="BAIXAR CV"
+                download={true}
+                icon={<FileDownloadOutlinedIcon fontSize="small" />}
+              />
             </div>
           </div>
           <div className="w-full flex flex-wrap gap-6 justify-center lg:justify-end">
             <div className={aboutMetricBoxCss}>
-              <h3 className={aboutMetricBoxYearsCss}>3</h3>
-              <p className={aboutMetricBoxTextCss}>ANOS DE EXPERIÊNCIA</p>
-            </div>
-            <div className={aboutMetricBoxCss}>
-              <h3 className={aboutMetricBoxYearsCss}>22</h3>
-              <p className={aboutMetricBoxTextCss}>PROJETOS PUBLICADOS</p>
+              <h3 className={aboutMetricBoxYearsCss}>9</h3>
+              <p className={aboutMetricBoxTextCss}>ANOS EM TECNOLOGIA</p>
             </div>
             <div className={aboutMetricBoxCss}>
               <h3 className={aboutMetricBoxYearsCss}>3</h3>
-              <p className={aboutMetricBoxTextCss}>AGÊNCIAS IMPACTADAS</p>
+              <p className={aboutMetricBoxTextCss}>ANOS EM FRONT-END</p>
+            </div>
+            <div className={aboutMetricBoxCss}>
+              <h3 className={aboutMetricBoxYearsCss}>4</h3>
+              <p className={aboutMetricBoxTextCss}>PLATAFORMAS DE E-COMMERCE</p>
             </div>
           </div>
         </section>
         <Divide />
         <section className="max-w-7xl w-full">
-          <TitleSecondary text="HARD SKILLS" align="center" />
+          <TitleSecondary text="TECNOLOGIAS & PLATAFORMAS" align="center" />
           <TecsChart />
         </section>
         <Divide />
         <section>
-          <TitleSecondary text="EXPERIÊNCIA & ACADÊMICO" align="center" />
+          <TitleSecondary text="EXPERIÊNCIA & FORMAÇÃO" align="center" />
           <Experience />
         </section>
       </>

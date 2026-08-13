@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     template: "%s | Gabriel Branco",
   },
   description:
-    "Portfólio de Gabriel Branco, desenvolvedor front-end no Rio de Janeiro especializado em React, Next.js, TypeScript e experiências web.",
+    "Portfólio de Gabriel Branco, desenvolvedor front-end no Rio de Janeiro especializado em e-commerce, React, TypeScript, VTEX e Shopify.",
   applicationName: "Portfólio Gabriel Branco",
   authors: [{ name: "Gabriel Branco", url: siteUrl }],
   creator: "Gabriel Branco",
@@ -40,13 +40,13 @@ export const metadata: Metadata = {
     siteName: "Portfólio Gabriel Branco",
     title: "Gabriel Branco | Desenvolvedor Front-end",
     description:
-      "Projetos, experiência e trajetória de Gabriel Branco em desenvolvimento front-end.",
+      "Projetos, experiência e trajetória de Gabriel Branco em desenvolvimento front-end para e-commerce.",
   },
   twitter: {
     card: "summary_large_image",
     title: "Gabriel Branco | Desenvolvedor Front-end",
     description:
-      "Projetos, experiência e trajetória em React, Next.js e TypeScript.",
+      "Projetos, experiência e trajetória em front-end, e-commerce, React e TypeScript.",
   },
   robots: {
     index: true,
@@ -101,7 +101,16 @@ export default function RootLayout({
           "https://www.linkedin.com/in/gabriel-branco/",
           "https://github.com/gb1993",
         ],
-        knowsAbout: ["React", "Next.js", "TypeScript", "JavaScript", "Front-end"],
+        knowsAbout: [
+          "React",
+          "TypeScript",
+          "JavaScript",
+          "Front-end",
+          "E-commerce",
+          "VTEX",
+          "Shopify",
+          "Deco",
+        ],
       },
       {
         "@type": "WebSite",

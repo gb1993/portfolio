@@ -10,6 +10,7 @@ import Container from "@/components/Container";
 import TitleSecondary from "@/components/TitleSecondary/intex";
 import Confetti from "react-confetti";
 import { Bounce, ToastContainer, toast } from "react-toastify";
+import SendRoundedIcon from "@mui/icons-material/SendRounded";
 
 export interface FormData {
   name: string;
@@ -167,8 +168,9 @@ const Contato = () => {
             </label>
             <button
               type="submit"
-              className="cursor-pointer hover:bg-primary font-bold w-full lg:w-fit flex items-center justify-center text-dark-or-light-secondary border-2 border-primary px-12 py-2 rounded-full"
+              className="cursor-pointer hover:bg-primary font-bold w-full lg:w-fit flex items-center justify-center gap-2 text-dark-or-light-secondary border-2 border-primary px-8 py-2 rounded-full"
             >
+              <SendRoundedIcon aria-hidden="true" fontSize="small" />
               ENVIAR
             </button>
             {showConfetti && <Confetti initialVelocityY={1} />}

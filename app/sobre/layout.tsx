@@ -3,13 +3,13 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Sobre mim e experiência",
   description:
-    "Conheça a trajetória, experiência profissional, formação e habilidades técnicas de Gabriel Branco, desenvolvedor front-end no Rio de Janeiro.",
+    "Conheça a trajetória, os resultados e as habilidades de Gabriel Branco, desenvolvedor front-end especializado em e-commerce no Rio de Janeiro.",
   alternates: { canonical: "/sobre" },
   openGraph: {
     url: "/sobre",
     title: "Sobre Gabriel Branco | Desenvolvedor Front-end",
     description:
-      "Experiência profissional, formação e habilidades em desenvolvimento front-end.",
+      "Experiência, resultados e habilidades em desenvolvimento front-end para e-commerce.",
   },
 };
 
